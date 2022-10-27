@@ -1,0 +1,32 @@
+<script>
+  function $_GET(param) {
+    var vars = {};
+    window.location.href.replace(location.hash, "").replace(
+      /[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+      function (m, key, value) {
+        // callback
+        vars[key] = value !== undefined ? value : "";
+      }
+    );
+
+    if (param) {
+      return vars[param] ? vars[param] : null;
+    }
+    return vars;
+  }
+
+  setTimeout(() => {
+    if ($_GET("n") === "1") {
+      window.location =
+        "https://wixlabs-pdf-dev.appspot.com/assets/pdfjs/web/viewer.html?file=%2Fpdfproxy%3Finstance%3Dj1jRwkWX7kqfGY90esMvgXTIuCoiCvzCOUQ7XHdvVL4.eyJpbnN0YW5jZUlkIjoiODRmMTE3ZDMtMDBhMi00YmU0LTliMDktZGVlZjQ3MGZkOWJkIiwiYXBwRGVmSWQiOiIxM2VlMTBhMy1lY2I5LTdlZmYtNDI5OC1kMmY5ZjM0YWNmMGQiLCJtZXRhU2l0ZUlkIjoiMzE4OWU4MzgtYzk3MC00NjIyLWE4YzEtMjBlZWNlYjM5ZGFhIiwic2lnbkRhdGUiOiIyMDIyLTEwLTIzVDA1OjE2OjIwLjQ1NFoiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6IjAyOTkyZjhlLWU3ODAtNGY4ZC05NjhjLTIyMzk0NzcyNGMxMCIsImJpVG9rZW4iOiJiNTc4ZmZlYi1jOWQyLTBkYzYtMzNjOC1mZTAxODliYzQ0MTciLCJzaXRlT3duZXJJZCI6ImJiYjE2ZjFhLTQwZmQtNDE0OC1iOWVlLTc1YWU0NzMwYmQ5YiJ9%26compId%3Dcomp-l6cox0ze%26url%3Dhttps%3A%2F%2Fdocs.wixstatic.com%2Fugd%2Fbbb16f_c99f98c40aec46adb4b2814cfe8f8a90.pdf#page=1&links=false&originalFileName=Les%20arbres%2C%20le%20champignon%20et%20le%20dragon%20!&locale=fr&allowDownload=false&allowPrinting=false";
+    } else if ($_GET("n") === "2") {
+      window.location =
+        "https://wixlabs-pdf-dev.appspot.com/assets/pdfjs/web/viewer.html?file=%2Fpdfproxy%3Finstance%3Dj1jRwkWX7kqfGY90esMvgXTIuCoiCvzCOUQ7XHdvVL4.eyJpbnN0YW5jZUlkIjoiODRmMTE3ZDMtMDBhMi00YmU0LTliMDktZGVlZjQ3MGZkOWJkIiwiYXBwRGVmSWQiOiIxM2VlMTBhMy1lY2I5LTdlZmYtNDI5OC1kMmY5ZjM0YWNmMGQiLCJtZXRhU2l0ZUlkIjoiMzE4OWU4MzgtYzk3MC00NjIyLWE4YzEtMjBlZWNlYjM5ZGFhIiwic2lnbkRhdGUiOiIyMDIyLTEwLTIzVDA1OjE2OjIwLjQ1NFoiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6IjAyOTkyZjhlLWU3ODAtNGY4ZC05NjhjLTIyMzk0NzcyNGMxMCIsImJpVG9rZW4iOiJiNTc4ZmZlYi1jOWQyLTBkYzYtMzNjOC1mZTAxODliYzQ0MTciLCJzaXRlT3duZXJJZCI6ImJiYjE2ZjFhLTQwZmQtNDE0OC1iOWVlLTc1YWU0NzMwYmQ5YiJ9%26compId%3Dcomp-l7tb3l4z%26url%3Dhttps%3A%2F%2Fdocs.wixstatic.com%2Fugd%2Fbbb16f_150d8045dd7f4bebb02e10744d5f56ae.pdf#page=1&links=false&originalFileName=L%E2%80%99%C3%A9crivain%20Th%C3%A9o%2C%20deviendra%20maire%20des%20champignons%20!%20-%20%5BChampi-G%C3%A9nial%5D&locale=fr&allowDownload=false&allowPrinting=false";
+    } else if ($_GET("n") === "3") {
+      window.location =
+        "https://wixlabs-pdf-dev.appspot.com/assets/pdfjs/web/viewer.html?file=%2Fpdfproxy%3Finstance%3Dj1jRwkWX7kqfGY90esMvgXTIuCoiCvzCOUQ7XHdvVL4.eyJpbnN0YW5jZUlkIjoiODRmMTE3ZDMtMDBhMi00YmU0LTliMDktZGVlZjQ3MGZkOWJkIiwiYXBwRGVmSWQiOiIxM2VlMTBhMy1lY2I5LTdlZmYtNDI5OC1kMmY5ZjM0YWNmMGQiLCJtZXRhU2l0ZUlkIjoiMzE4OWU4MzgtYzk3MC00NjIyLWE4YzEtMjBlZWNlYjM5ZGFhIiwic2lnbkRhdGUiOiIyMDIyLTEwLTIzVDA1OjE2OjIwLjQ1NFoiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6IjAyOTkyZjhlLWU3ODAtNGY4ZC05NjhjLTIyMzk0NzcyNGMxMCIsImJpVG9rZW4iOiJiNTc4ZmZlYi1jOWQyLTBkYzYtMzNjOC1mZTAxODliYzQ0MTciLCJzaXRlT3duZXJJZCI6ImJiYjE2ZjFhLTQwZmQtNDE0OC1iOWVlLTc1YWU0NzMwYmQ5YiJ9%26compId%3Dcomp-l99ogznb%26url%3Dhttps%3A%2F%2Fdocs.wixstatic.com%2Fugd%2Fbbb16f_853b91fe570d450092c59b4e074c4ffa.pdf#page=1&links=false&originalFileName=Le%20concert%20de%20vari%C3%A9t%C3%A9%20des%20champignons%20!%20%5BChampi-G%C3%A9nial%5D&locale=fr&allowDownload=false&allowPrinting=false";
+    }
+  }, 5000);
+</script>
+
+<h1>Vous allez être redirigé vers la page!</h1>
